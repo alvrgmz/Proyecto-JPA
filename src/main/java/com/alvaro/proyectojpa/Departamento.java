@@ -1,27 +1,29 @@
 package com.alvaro.proyectojpa;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Entity
-@Table(name="dept", catalog="emp_dept")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Departamento {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="id_emp")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id_dept")
     Long id_departamento;
-    @Column(name="empno")
+
     String numero;
-    @Column(name="ename")
-    String apellido;
-    @Column(name="job")
-    String oficio;
-    @Column(name="hiredate")
-    LocalDate fechaContratacion;
-    @ManyToOne
-    @JoinColumn(name="mgr", foreignKey = @ForeignKey(name = "FK_DEPT_MGR"))
-    Empleado jefe;
+    String nombre;
+    Long localidad;
+
+    @Column(name="fecha_creacion")
+    LocalDate fechaCreacion;
+
 
 
 }
