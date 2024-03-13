@@ -4,7 +4,8 @@ import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
+import java.util.Set;
+@Entity
 public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -37,13 +38,13 @@ public class Empleado {
     @ManyToMany
     @JoinTable(
             name = "emp_proy",
-                joinColumns = @JoinColumn(name = "id_emp",
-                    foreignKey = @ForeignKey(name = "FK_emp_proy_id_emp",
-                    inverseJoinColumns = @JoinColumn(name = "id_proy",
+            joinColumns = {@JoinColumn(name = "id_emp",
+                    foreignKey = @ForeignKey(name = "FK_emp_proy_id_emp"))},
+            inverseJoinColumns = @JoinColumn(name = "id_proy",
                     foreignKey = @ForeignKey(name = "FK_emp_proy_id_proy"))
-            )
     )
-    Set<Proyecto> proyectos;
+    Set<Proyecto> listaProyectos;
+
 }
 
 

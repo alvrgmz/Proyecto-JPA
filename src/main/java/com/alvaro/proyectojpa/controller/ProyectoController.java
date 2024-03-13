@@ -12,17 +12,17 @@ import java.util.Optional;
 @CrossOrigin("*")
 @RequestMapping("proyecto")
 public class ProyectoController {
-    @Autowired
-    ProyectoRepository proyectoRepositorio;
-
-    @GetMapping("listado")
-    public List<Departamento> listadoProyectos(){
-        return proyectoRepositorio.findAll();
-    }
-
-    @GetMapping("/id")
-    public Optional<Departamento> devuelveDepartamentoPorId(@PathVariable long id){
-        return departamentoRepositorio.findById(id);
-    }
+//    @Autowired
+//    ProyectoRepository proyectoRepositorio;
+//
+//    @GetMapping("listado")
+//    public List<Departamento> listadoProyectos(){
+//        return proyectoRepositorio.findAll();
+//    }
+//
+//    @GetMapping("/id")
+//    public Optional<Departamento> devuelveDepartamentoPorId(@PathVariable long id){
+//        return departamentoRepositorio.findById(id);
+//    }
 
 }

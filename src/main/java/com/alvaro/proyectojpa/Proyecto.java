@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.Set;
-
+@Entity
 public class Proyecto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

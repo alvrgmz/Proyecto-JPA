@@ -9,9 +9,9 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface ProyectoRepository extends JpaRepository<Proyecto, Long> {
-    public List<Proyecto> findByFechaInicioandFechaFin(LocalDate fechaInicio, LocalDate fechaFin);
-
+//    public List<Proyecto> findByFechaInicioandFechaFin(LocalDate fechaInicio, LocalDate fechaFin);
+//
     public List<Proyecto> findByPeriodo(Periodo periodo);
-
-    public List<Proyecto> findByPeriodoBetween(LocalDate fechaInicio, LocalDate fechaFin);
+//
+//    public List<Proyecto> findByPeriodoBetween(LocalDate fechaInicio, LocalDate fechaFin);
 }

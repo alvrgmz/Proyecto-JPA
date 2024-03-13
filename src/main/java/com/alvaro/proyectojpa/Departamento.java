@@ -19,7 +19,7 @@ public class Departamento {
 
     String numero;
     String nombre;
-    Long localidad;
+    String localidad;
 
     @Column(name="fecha_creacion")
     LocalDate fechaCreacion;
